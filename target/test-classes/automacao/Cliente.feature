@@ -1,10 +1,9 @@
 #language: pt
 
 @tag
-Funcionalidade: Título da minha featue
-	Usar esse template para minha feature
+Funcionalidade: Cadastro de Clientes
 
-	Cenario: Inserir Cliente Pessoa Física
+	Cenario: Inserir Cliente Pessoa Fisica
 		Dado efetuei login no sistema
 		E acessei o menu Clientes >> Inserir
 		Quando na tela de Identificacao informo os dados de Pessoa Fisica

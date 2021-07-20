@@ -7,6 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
+
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -27,6 +28,13 @@
 			<artifactId>cucumber-junit</artifactId>
 			<version>1.2.5</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.0.3</version>
 		</dependency>
 
 	</dependencies>
