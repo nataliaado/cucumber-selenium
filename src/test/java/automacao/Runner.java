@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "src/test/java/automacao/Cliente.feature",
 glue = { "" }, monochrome = true, dryRun = false)
 
-public class ClienteTest {
+public class Runner {
 
 	
 }

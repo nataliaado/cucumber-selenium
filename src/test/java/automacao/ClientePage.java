@@ -1,8 +1,13 @@
 package automacao;
 
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class ClientePage extends ClienteAttributes {
+
+	public ClientePage() {
+		PageFactory.initElements(TestRule.getDriver(), this);
+	}
 
 	public void informarIdentificacaoPF() {
 		fisica.click();
@@ -15,7 +20,7 @@ public class ClientePage extends ClienteAttributes {
 		cmbSexo.selectByVisibleText("Feminino");
 
 		Select cmbEstadoCivil = new Select(estado_civil);
-		cmbEstadoCivil.selectByVisibleText("Solteira");
+		cmbEstadoCivil.selectByVisibleText("Solteiro");
 	}
 
 	public void clicarAvancar() {
@@ -32,13 +37,15 @@ public class ClientePage extends ClienteAttributes {
 
 		Select cmbEstadoEndPrincipal = new Select(endp_estado);
 		cmbEstadoEndPrincipal.selectByVisibleText("SC");
+		endp_telefone.sendKeys("51 3366-9854");
+		endp_celular.sendKeys("54 99658-3974");
 
 		// Endereço Cobrança
 		endc_cep.sendKeys("99134-569");
 		endc_endereco.sendKeys("Rua da Automacao Cobrança");
-		endp_numero.sendKeys("111");
-		endp_complemento.sendKeys("Portaria 1");
-		endp_cidade.sendKeys("Curitiba");
+		endc_numero.sendKeys("111");
+		endc_complemento.sendKeys("Portaria 1");
+		endc_cidade.sendKeys("Curitiba");
 
 		Select cmbEstadoEndCobranca = new Select(endc_estado);
 		cmbEstadoEndCobranca.selectByVisibleText("PR");
@@ -50,6 +57,10 @@ public class ClientePage extends ClienteAttributes {
 	public void verificarMensagemSucesso() {
 		// TODO Auto-generated method stub
 
+	}
+
+	public void clicarSalvar() {
+		salvar.click();
 	}
 
 }

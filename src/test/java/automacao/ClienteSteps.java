@@ -38,7 +38,7 @@ public class ClienteSteps {
 
 	@E("^na tela enderecos clico em Salvar$")
 	public void clicarSalvar() throws Throwable {
-		clientePage.clicarAvancar();
+		clientePage.clicarSalvar();
 	}
 
 	@Entao("^na tela enderecos sera exibida mensagem de sucesso$")
