@@ -17,42 +17,46 @@ import cucumber.api.java.Before;
 
 public class TestRule {
 
-	private static WebDriver driver;
-	private static ExtentHtmlReporter htmlReporter;
-	private static ExtentReports extentReport;
-	private static ExtentTest extentTest;
+    private static WebDriver driver;
+    private static ExtentHtmlReporter htmlReporter;
+    private static ExtentReports extentReport;
+    private static ExtentTest extentTest;
 
-	@Before
-	public void beforeCenario(Scenario cenario) {
-		if (extentReport == null) {
-			extentReport = new ExtentReports();
-			htmlReporter = new ExtentHtmlReporter("src/test/resources/htmlReporter.html");
-			extentReport.attachReporter(htmlReporter);
-		}
+    @Before
+    public void beforeCenario(Scenario cenario) {
+        if (extentReport == null) {
+            extentReport = new ExtentReports();
+            htmlReporter = new ExtentHtmlReporter("src/test/resources/htmlReporter.html");
+            extentReport.attachReporter(htmlReporter);
+        }
 
-		extentTest = extentReport.createTest(cenario.getId());
+        extentTest = extentReport.createTest(cenario.getId());
 
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver.exe");
 
-		// Para acessar a base de dados corretamente
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("user-data-dir=C:/Users/Nataliaado/AppData/Local/Google/Chrome/User Data");
+        // Para acessar a base de dados corretamente
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("user-data-dir=C:/Users/Nataliaado/AppData/Local/Google/Chrome/User Data");
 
-		// Inicia o driver e navega até a página inicial
-		driver = new ChromeDriver(options);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.navigate().to("file:///C:/Users/Nataliaado/Documents/versao2/Versão 2/index.html");
+        // Inicia o driver e navega atï¿½ a pï¿½gina inicial
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.navigate().to("file:///C:/Users/Nataliaado/Documents/versao2/Versï¿½o 2/index.html");
 
-	}
+    }
 
-	@After
-	public void afterCenario(Scenario cenario) {
-		extentTest.log(Status.PASS, "Cenario " + cenario.getName() + " executado com sucesso");
-		extentReport.flush();
-	}
+    @After
+    public void afterCenario(Scenario cenario) {
+        extentTest.log(Status.PASS, "Cenario " + cenario.getName() + " executado com sucesso");
+        extentReport.flush();
+    }
 
-	public static WebDriver getDriver() {
-		return driver;
-	}
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
+    public static ExtentTest getExtentTest() {
+        return extentTest;
+    }
 }
