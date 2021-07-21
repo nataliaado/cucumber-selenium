@@ -35,4 +35,6 @@ public class ClienteAttributes {
 	protected WebElement endc_celular;
 
 	protected WebElement salvar;
+	
+	protected WebElement mensagem;
 }

@@ -54,8 +54,19 @@ public class ClientePage extends ClienteAttributes {
 
 	}
 
-	public void verificarMensagemSucesso() {
-		// TODO Auto-generated method stub
+	public boolean verificarMensagemSucesso() {
+
+		/*
+		 * try { synchronized (TestRule.getDriver()) { TestRule.getDriver().wait(3000);
+		 * } } catch (InterruptedException e) { e.printStackTrace(); }
+		 */
+		String strMensagemExibida = mensagem.getText();
+		System.out.println("Mensagem de texto exibida: " + strMensagemExibida);
+		if (strMensagemExibida.contains("Cliente cadastrado com sucesso")) {
+			return true;
+		} else {
+			return false;
+		}
 
 	}
 

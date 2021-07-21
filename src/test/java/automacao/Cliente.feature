@@ -11,4 +11,3 @@ Funcionalidade: Cadastro de Clientes
 		E na tela enderecos informo os enderecos
 		E na tela enderecos clico em Salvar
 		Entao na tela enderecos sera exibida mensagem de sucesso
-		E efetuarei logout do sistema
