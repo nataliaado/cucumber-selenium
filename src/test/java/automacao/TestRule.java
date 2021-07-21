@@ -42,7 +42,7 @@ public class TestRule {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.navigate().to("file:///C:/Users/Nataliaado/Documents/versao2/Versï¿½o 2/index.html");
+        driver.navigate().to("file:///C:/Users/Nataliaado/Documents/versao2/Versão 2/index.html");
 
     }
 

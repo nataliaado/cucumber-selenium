@@ -24,7 +24,7 @@ public class ClienteSteps {
     @Quando("^na tela de Identificacao informo os dados de Pessoa Fisica$")
     public void informarDadosIdentificacaoPF() throws Throwable {
         clientePage.informarIdentificacaoPF();
-        Utils.logPrint("Dados de Identificação");
+        Utils.logPrint("Dados de Identificacao");
     }
 
     @E("^na tela de Identificacao clico em Avancar$")
@@ -35,7 +35,7 @@ public class ClienteSteps {
     @E("^na tela enderecos informo os enderecos$")
     public void informarEnderecos() throws Throwable {
         clientePage.informarEnderecos();
-        Utils.logPrint("Endereços");
+        Utils.logPrint("Enderecos");
     }
 
     @E("^na tela enderecos clico em Salvar$")
