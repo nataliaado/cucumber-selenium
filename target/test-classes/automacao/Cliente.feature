@@ -4,7 +4,7 @@
 Funcionalidade: Cadastro de Clientes
 
 	Cenario: Inserir Cliente Pessoa Fisica
-		Dado efetuei login no sistema
+		Dado efetuei login no sistema utilizando o usuario john e a senha john
 		E acessei o menu Clientes >> Inserir
 		Quando na tela de Identificacao informo os dados de Pessoa Fisica
 		E na tela de Identificacao clico em Avancar

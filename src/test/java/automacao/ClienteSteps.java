@@ -13,9 +13,9 @@ public class ClienteSteps {
 	MenusPage menusPage = new MenusPage();
 	LoginPage loginPage = new LoginPage();
 
-	@Dado("^efetuei login no sistema$")
-	public void efetuarLogin() throws Throwable {
-		loginPage.efetuarLogin();
+	@Dado("^efetuei login no sistema utilizando o usuario (.*) e a senha (.*)$")
+	public void efetuarLogin(String strUsuario, String strSenha) throws Throwable {
+		loginPage.efetuarLogin(strUsuario, strSenha);
 	}
 
 	@E("^acessei o menu Clientes >> Inserir$")
