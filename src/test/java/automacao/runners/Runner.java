@@ -1,4 +1,4 @@
-package automacao;
+package automacao.runners;
 
 import org.junit.runner.RunWith;
 
@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/automacao/Cliente.feature",
+@CucumberOptions(features = "src/test/java/automacao/features/Cliente.feature",
 glue = { "" }, monochrome = true, dryRun = false)
 
 public class Runner {

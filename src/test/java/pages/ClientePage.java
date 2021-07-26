@@ -1,7 +1,11 @@
-package automacao;
+package pages;
 
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import automacao.attributes.ClienteAttributes;
+import automacao.commons.TestRule;
+import automacao.commons.Utils;
 
 public class ClientePage extends ClienteAttributes {
 

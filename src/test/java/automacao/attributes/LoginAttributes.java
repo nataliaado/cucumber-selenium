@@ -1,4 +1,4 @@
-package automacao;
+package automacao.attributes;
 
 import org.openqa.selenium.WebElement;
 

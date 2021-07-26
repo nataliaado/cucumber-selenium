@@ -1,4 +1,4 @@
-package automacao;
+package automacao.commons;
 
 import java.util.concurrent.TimeUnit;
 

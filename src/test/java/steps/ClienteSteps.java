@@ -1,11 +1,15 @@
-package automacao;
+package steps;
 
 import org.junit.Assert;
 
+import automacao.commons.Utils;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import pages.ClientePage;
+import pages.LoginPage;
+import pages.MenusPage;
 
 public class ClienteSteps {
 
@@ -24,7 +28,8 @@ public class ClienteSteps {
 	}
 
 	@Quando("^na tela de Identificacao informo os dados de Pessoa Fisica: (.*), (.*), (.*), (.*) e (.*)$")
-	public void informarDadosIdentificacaoPF(String strNome, String strEmail, String strData_nascimento, String strSexo, String strEstado_civil) throws Throwable {
+	public void informarDadosIdentificacaoPF(String strNome, String strEmail, String strData_nascimento, String strSexo,
+			String strEstado_civil) throws Throwable {
 		clientePage.informarIdentificacaoPF(strNome, strEmail, strData_nascimento, strSexo, strEstado_civil);
 		Utils.logPrint("Dados de Identificacao");
 	}

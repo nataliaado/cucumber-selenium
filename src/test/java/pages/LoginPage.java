@@ -1,6 +1,9 @@
-package automacao;
+package pages;
 
 import org.openqa.selenium.support.PageFactory;
+
+import automacao.attributes.LoginAttributes;
+import automacao.commons.TestRule;
 
 public class LoginPage extends LoginAttributes {
 

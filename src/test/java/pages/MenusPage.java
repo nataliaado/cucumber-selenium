@@ -1,9 +1,12 @@
-package automacao;
+package pages;
 
 import java.awt.Desktop.Action;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
+import automacao.attributes.MenusAttibutes;
+import automacao.commons.TestRule;
 
 public class MenusPage extends MenusAttibutes {
 
