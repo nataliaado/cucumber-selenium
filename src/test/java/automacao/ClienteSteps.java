@@ -23,9 +23,9 @@ public class ClienteSteps {
 		menusPage.acessarMenuClientesInserir();
 	}
 
-	@Quando("^na tela de Identificacao informo os dados de Pessoa Fisica$")
-	public void informarDadosIdentificacaoPF() throws Throwable {
-		clientePage.informarIdentificacaoPF();
+	@Quando("^na tela de Identificacao informo os dados de Pessoa Fisica: (.*), (.*), (.*), (.*) e (.*)$")
+	public void informarDadosIdentificacaoPF(String strNome, String strEmail, String strData_nascimento, String strSexo, String strEstado_civil) throws Throwable {
+		clientePage.informarIdentificacaoPF(strNome, strEmail, strData_nascimento, strSexo, strEstado_civil);
 		Utils.logPrint("Dados de Identificacao");
 	}
 

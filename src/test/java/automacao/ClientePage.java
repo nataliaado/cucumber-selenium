@@ -9,18 +9,19 @@ public class ClientePage extends ClienteAttributes {
 		PageFactory.initElements(TestRule.getDriver(), this);
 	}
 
-	public void informarIdentificacaoPF() {
+	public void informarIdentificacaoPF(String strNome, String strEmail, String strData_nascimento, String strSexo,
+			String strEstado_civil) {
 		fisica.click();
-		cpf_cnpj.sendKeys("837.623.723-30");
-		nome_razaosocial.sendKeys("Automacao");
-		email.sendKeys("automacao@email.com");
-		data_nascimento.sendKeys("20/07/2000");
+		cpf_cnpj.sendKeys(Utils.gerarDocumento("CPF"));
+		nome_razaosocial.sendKeys(strNome);
+		email.sendKeys(strEmail);
+		data_nascimento.sendKeys(strData_nascimento);
 
 		Select cmbSexo = new Select(sexo);
-		cmbSexo.selectByVisibleText("Feminino");
+		cmbSexo.selectByVisibleText(strSexo);
 
 		Select cmbEstadoCivil = new Select(estado_civil);
-		cmbEstadoCivil.selectByVisibleText("Solteiro");
+		cmbEstadoCivil.selectByVisibleText(strEstado_civil);
 	}
 
 	public void clicarAvancar() {
