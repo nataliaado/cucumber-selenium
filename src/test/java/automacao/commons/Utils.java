@@ -11,18 +11,20 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class Utils {
 
 	public static void logPrint(String strLog) {
+		String strLogFormatado = formatarNomeLog(strLog);
 		ExtentTest extentTest = TestRule.getExtentTest();
 		try {
-			efetuarPrintTela(strLog);
+			efetuarPrintTela(strLogFormatado);
 			extentTest.log(Status.INFO, strLog,
-					MediaEntityBuilder
-							.createScreenCaptureFromPath(
-									System.getProperty("user.dir") + "\\src\\test\\resources\\" + strLog + ".png")
+					MediaEntityBuilder.createScreenCaptureFromPath(
+							System.getProperty("user.dir") + "\\src\\test\\resources\\" + strLogFormatado + ".png")
 							.build());
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -128,6 +130,22 @@ public class Utils {
 		return cnpj.toString();
 	}
 
-	
+	public static void wait(int intSegundos) {
+		try {
+			synchronized (TestRule.getDriver()) {
+				TestRule.getDriver().wait(intSegundos * 1000);
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	private static String formatarNomeLog(String strLog) {
+		LocalDateTime dataHoraAgora = LocalDateTime.now();
+		DateTimeFormatter formatoDataHora = DateTimeFormatter.ofPattern("dd_MM_yy_HH_mm_ss");
+		String strLogFormatado = strLog + "_" + dataHoraAgora.format(formatoDataHora);
+		return strLogFormatado;
+	}
 
 }

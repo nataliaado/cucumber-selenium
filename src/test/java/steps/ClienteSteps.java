@@ -34,6 +34,12 @@ public class ClienteSteps {
 		Utils.logPrint("Dados de Identificacao");
 	}
 
+	@Quando("^na tela de Identificacao informo os dados de Pessoa Juridica: (.*) e (.*)$")
+	public void informarDadosIdentificacaoPJ(String strRazaoSocial, String strEmail) throws Throwable {
+		clientePage.informarIdentificacaoPJ(strRazaoSocial, strEmail);
+		Utils.logPrint("Dados de Identificacao");
+	}
+
 	@E("^na tela de Identificacao clico em Avancar$")
 	public void clicarAvancar() throws Throwable {
 		clientePage.clicarAvancar();
@@ -48,6 +54,7 @@ public class ClienteSteps {
 	@E("^na tela enderecos clico em Salvar$")
 	public void clicarSalvar() throws Throwable {
 		clientePage.clicarSalvar();
+		Utils.wait(1);
 		Utils.logPrint("Cliente Cadastrado");
 	}
 
@@ -61,6 +68,17 @@ public class ClienteSteps {
 			Utils.logFail("Erro ao cadastrar o cliente");
 		}
 		Assert.assertTrue("Não exibiu a mensagem de Sucesso", blnExibiuMensagemSucesso);
+	}
+
+	@Entao("^a tela dados de Identificacao deve ser exibida na tela$")
+	public void verificarExibicaoTelaDadosIdentificacao() {
+		boolean blnExibiuMensagemSucesso = clientePage.verificarExibicaoTelaDadosIdentificacao();
+		if (blnExibiuMensagemSucesso) {
+			Utils.logPass("Tela de Dados de Identificação exibida com sucesso");
+		} else {
+			Utils.logFail("Erro ao exibir a tela de Dados de Identificacao");
+		}
+		Assert.assertTrue("Não exibiu a tela Dados de Identificacao", blnExibiuMensagemSucesso);
 	}
 
 }

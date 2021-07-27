@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import automacao.attributes.MenusAttibutes;
 import automacao.commons.TestRule;
+import automacao.commons.Utils;
 
 public class MenusPage extends MenusAttibutes {
 
@@ -18,6 +19,7 @@ public class MenusPage extends MenusAttibutes {
 		Actions actions = new Actions(TestRule.getDriver());
 		actions.moveToElement(menuClientes);
 		actions.moveToElement(submenuClientesInserir);
+		Utils.wait(1);
 		actions.click().build().perform();
 	}
 }
