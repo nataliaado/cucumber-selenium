@@ -1,15 +1,15 @@
-package steps;
+package automacao.steps;
 
 import org.junit.Assert;
 
 import automacao.commons.Utils;
+import automacao.pages.ClientePage;
+import automacao.pages.LoginPage;
+import automacao.pages.MenusPage;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
-import pages.ClientePage;
-import pages.LoginPage;
-import pages.MenusPage;
 
 public class ClienteSteps {
 

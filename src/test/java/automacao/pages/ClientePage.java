@@ -1,4 +1,4 @@
-package pages;
+package automacao.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;

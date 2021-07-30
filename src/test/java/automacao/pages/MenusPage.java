@@ -1,4 +1,4 @@
-package pages;
+package automacao.pages;
 
 import java.awt.Desktop.Action;
 
