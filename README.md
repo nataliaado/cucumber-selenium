@@ -1,5 +1,3 @@
-# cucumber-selenium
-
 <strong> Projeto de teste em selenium utilizando cucumber. </strong>
 
 * Os testes desse projeto são feitos com base em um projeto Web Local.
