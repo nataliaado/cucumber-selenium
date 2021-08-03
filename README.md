@@ -1,6 +1,6 @@
 # cucumber-selenium
 
-Projeto de teste em selenium utilizando cucumber.
+# h1 Projeto de teste em selenium utilizando cucumber.
 
 Os testes desse projeto são feitos com base em um projeto Web Local.
 Então para que seja possível a execução dos testes é preciso que sejam feitas as seguintes configurações:
@@ -16,3 +16,8 @@ Configurando o projeto:
   
 4.  Clique em "Gerar Base de Dados" (isso irá fazer com que o sistema funcione em seu navegador).
 -----------------------------------------------------------------------------------------------------------
+
+Page Objects
+Page Factory
+Gerador de Relatório
+Screenshot
