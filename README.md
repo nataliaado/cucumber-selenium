@@ -1,6 +1,6 @@
 # cucumber-selenium
 
- Projeto de teste em selenium utilizando cucumber.
+<strong> Projeto de teste em selenium utilizando cucumber. </strong>
 
 Os testes desse projeto são feitos com base em um projeto Web Local.
 Então para que seja possível a execução dos testes é preciso que sejam feitas as seguintes configurações:
@@ -18,6 +18,6 @@ Configurando o projeto:
 -----------------------------------------------------------------------------------------------------------
 
 - [X] Page Objects
-Page Factory
-Gerador de Relatório
-Screenshot
+- [X] Page Factory
+- [X] Gerador de Relatório
+- [X] Screenshot
