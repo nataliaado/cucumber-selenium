@@ -3,7 +3,7 @@
 * Os testes desse projeto são feitos com base em um projeto Web Local.
 Então para que seja possível a execução dos testes é preciso que sejam feitas as seguintes configurações:
 
-Configurando o projeto:
+<strong> Configurando o projeto:  </strong>
 
 1.  Com o clone já feito em sua máquina, vá até a pasta do projeto e acesse:
       -> src/test/resources/sistemaLocal
